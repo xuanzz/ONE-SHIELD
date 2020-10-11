@@ -9,7 +9,7 @@ Author: Darren Chan
 #ifndef ONE_Shield_h
 #define ONE_Shield_h
 #include "Arduino.h"
-//Pin definitions
+//Pin definitions for Pro Micro
 #define left_LED_Pin 2
 #define right_LED_Pin 3
 #define		PWMA  6
@@ -19,6 +19,12 @@ Author: Darren Chan
 #define		BIN1  16
 #define		BIN2  10
 #define 	EN	15
+//Pin definitions for Pro Mini
+#ifdef PRO_MINI
+#define		BIN1  11
+#define		BIN2  10
+#define 	EN	13
+#endif
 
 class LED
 {
