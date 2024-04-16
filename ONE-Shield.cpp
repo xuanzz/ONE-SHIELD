@@ -46,7 +46,14 @@ Motor::Motor(int Motor_Name)
 
 void Motor::on(int direction)
 {
-Motor::turn(defaultSpeed);
+	if (direction)
+	{
+		Motor::turn(defaultSpeed);
+	}
+	else
+	{
+		Motor::turn(-defaultSpeed);
+	}
 }
 void Motor::off()
 {
